@@ -11,6 +11,8 @@ public class Timer : MonoBehaviour
 	void Start()
 	{
 		counterText = GetComponent<Text>() as Text;
+		seconds = 0;
+		minutes = 0;
 	}
 	
 	void Update()
