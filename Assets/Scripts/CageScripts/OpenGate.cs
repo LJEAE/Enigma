@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class OpenGate : MonoBehaviour
 {
+	public bool isOpen = false;
+	private Animator anim;
+	
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GameObject.Find("Porte").GetComponent<Animator>();
     }
 	
     // Update is called once per frame
@@ -20,10 +23,12 @@ public class OpenGate : MonoBehaviour
     {
 		foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
         {
-			if(go.GetComponent<OpenCadenasKey>() != null){
+			if(go.GetComponent<OpenCadenasKey>() != null && go.GetComponent<OpenCadenasCode>() != null)
+			{
 				if(go.GetComponent<OpenCadenasKey>().isOpen == true && go.GetComponent<OpenCadenasCode>().isOpen == true){
-					//TODO play anim
-					GameObject.Find("Porte").SetActive(false);
+					GameObject.Find("Porte").GetComponent<OpenGate>().isOpen = true;
+					//Play anim
+					anim.SetBool("Active", true);
 					Debug.Log("PORTE OUVERTE");
 				}
 			}

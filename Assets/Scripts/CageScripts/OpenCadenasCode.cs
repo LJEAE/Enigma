@@ -5,11 +5,12 @@ using UnityEngine;
 public class OpenCadenasCode : MonoBehaviour
 {
 	public bool isOpen = false;
+	private Animator anim;
 	
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GameObject.Find("HautCadenasD").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -31,8 +32,14 @@ public class OpenCadenasCode : MonoBehaviour
 			&& cube4.GetComponent<ShadeChange>().cubeColor == 2)
 		{
 			isOpen = true;
-			//TODO play anim
-			gameObject.SetActive(false);
+			//Play anim and hide objects
+			anim.SetBool("Active", true);
+			gameObject.GetComponent<Disparition>().hide = true;
+			GameObject.Find("HautCadenasD").GetComponent<Disparition>().hide = true;
+			GameObject.Find("Code1").GetComponent<Disparition>().hide = true;
+			GameObject.Find("Code2").GetComponent<Disparition>().hide = true;
+			GameObject.Find("Code3").GetComponent<Disparition>().hide = true;
+			GameObject.Find("Code4").GetComponent<Disparition>().hide = true;
 			Debug.Log("CADENAS CODE OUVERT");
 		}
     }
