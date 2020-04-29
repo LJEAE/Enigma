@@ -8,12 +8,14 @@ public class RockSpawner : MonoBehaviour
     public GameObject rockObject;
     private GameObject button;
     private PlacementIndicator placementIndicator;
+    Pose finalRockPose;
+
+    public Pose FinalRockPose { get => finalRockPose; set => finalRockPose = value; }
 
     void Start()
     {
         placementIndicator = FindObjectOfType<PlacementIndicator>();
-        button = GameObject.Find("FixBtn");
-
+        button = GameObject.Find("FixerBtn");
     }
 
     void Update()
@@ -24,6 +26,11 @@ public class RockSpawner : MonoBehaviour
             {
                 InstantiateObject();
             }
+            else
+            {
+                finalRockPose.position = spawnObject.transform.position;
+                finalRockPose.rotation = spawnObject.transform.rotation;
+            }
         }
     }
 
@@ -32,8 +39,7 @@ public class RockSpawner : MonoBehaviour
         Debug.Log("Objet > " + rockObject.name);
         if (spawnObject == null)
         {
-            spawnObject = Instantiate(rockObject, placementIndicator.transform.position, placementIndicator.transform.rotation);
-
+            spawnObject = Instantiate(rockObject, placementIndicator.transform.position, Quaternion.identity);
         }
         else
         {

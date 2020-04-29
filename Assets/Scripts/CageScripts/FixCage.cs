@@ -14,7 +14,7 @@ public class FixCage : MonoBehaviour
         finalCagePose = FindObjectOfType<CageSpawner>().FinalCagePos;
 
         cageObject = GameObject.Find("toit");
-        btn = GameObject.Find("FixBtn");
+        btn = GameObject.Find("FixerBtn");
     }
 
     public void FixeCagePosition()

@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
-using UnityEngine.UI;
 
 public class PlacementIndicator : MonoBehaviour
 {
@@ -11,17 +9,18 @@ public class PlacementIndicator : MonoBehaviour
     private GameObject visual;
     private GameObject button;
     private GameObject headPanel;
-    private bool isFixed = false;
+    public string panelName;
+    public string btnName;
 
-    public bool IsFixed { get => isFixed; set => isFixed = value; }
+    public bool IsFixed { get; set; } = false;
 
     void Start()
     {
         // Get the component
         raycastManager = FindObjectOfType<ARRaycastManager>();
         visual = transform.GetChild(0).gameObject;
-        button = GameObject.Find("FixBtn");
-        headPanel = GameObject.Find("HeadCanvas");
+        button = GameObject.Find(btnName);
+        headPanel = GameObject.Find(panelName);
 
         // Hide the placement visual + button
         visual.SetActive(false);
@@ -31,7 +30,7 @@ public class PlacementIndicator : MonoBehaviour
 
     void Update()
     {
-        if (isFixed == false)
+        if (IsFixed == false)
         {
             UpdatePlacementIndicationPosition();
         }

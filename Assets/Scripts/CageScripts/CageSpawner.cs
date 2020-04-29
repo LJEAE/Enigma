@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CageSpawner : MonoBehaviour
 {
@@ -16,7 +14,6 @@ public class CageSpawner : MonoBehaviour
     {
         placementIndicator = FindObjectOfType<PlacementIndicator>();
         button = GameObject.Find("FixBtn");
-
     }
 
     void Update()
@@ -40,7 +37,7 @@ public class CageSpawner : MonoBehaviour
         Debug.Log("Objet > " + cageObject.name);
         if (spawnObject == null)
         {
-            spawnObject = Instantiate(cageObject, placementIndicator.transform.position, placementIndicator.transform.rotation);
+            spawnObject = Instantiate(cageObject, placementIndicator.transform.position, Quaternion.identity);
 
         }
         else
