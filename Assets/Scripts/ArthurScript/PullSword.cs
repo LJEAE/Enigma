@@ -6,11 +6,14 @@ public class PullSword : MonoBehaviour
 {
 	public List<int> stackCode = new List<int>();
 	private string code = "11241328";
+	public bool getkey = false;
+	private Animator anim;
 	
     // Start is called before the first frame update
     void Start()
     {
-		
+		anim = gameObject.GetComponent<Animator>();
+		GameObject.Find("LightEffect").GetComponent<ParticleSystem>().Pause();
 	}
 
     // Update is called once per frame
@@ -22,7 +25,8 @@ public class PullSword : MonoBehaviour
 	void OnMouseDown()
 	{
 		string foundCode = "";
-		
+		anim.SetBool("Active", true);
+			GameObject.Find("LightEffect").GetComponent<ParticleSystem>().Play();
         foreach( int number in stackCode )
         {
             foundCode = foundCode + number;
@@ -30,9 +34,10 @@ public class PullSword : MonoBehaviour
 		
 		if(foundCode == code)
 		{
-			//TODO place animation here
+			//Play anim and effect
+			anim.SetBool("Active", true);
+			GameObject.Find("LightEffect").GetComponent<ParticleSystem>().Play();
 			Debug.Log("EPEE RETIREE");
-			gameObject.SetActive(false);
 		}
 	}
 }
