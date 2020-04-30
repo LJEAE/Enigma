@@ -25,8 +25,7 @@ public class PullSword : MonoBehaviour
 	void OnMouseDown()
 	{
 		string foundCode = "";
-		anim.SetBool("Active", true);
-			GameObject.Find("LightEffect").GetComponent<ParticleSystem>().Play();
+		
         foreach( int number in stackCode )
         {
             foundCode = foundCode + number;
