@@ -20,7 +20,7 @@ public class CageSpawner : MonoBehaviour
     {
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
         {
-            if (placementIndicator.IsFixed == false)
+            if (placementIndicator.IsFixed == false && placementIndicator.IsValidPosition == true)
             {
                 InstantiateObject();
             } 
