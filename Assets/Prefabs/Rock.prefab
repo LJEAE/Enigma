@@ -4730,6 +4730,7 @@ GameObject:
   - component: {fileID: 872469762494519695}
   - component: {fileID: 872469762494519729}
   - component: {fileID: 872469762494519703}
+  - component: {fileID: 1784577185344230397}
   m_Layer: 0
   m_Name: Cube2
   m_TagString: Untagged
@@ -4814,6 +4815,20 @@ MonoBehaviour:
   highlightMat: {fileID: 2100000, guid: faa06f611437ea44f9d415cd0a375070, type: 2}
   defaultMat: {fileID: 2100000, guid: 519a0d758a4cb434dba246fc6cb31fa3, type: 2}
   number: 11
+--- !u!64 &1784577185344230397
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872469762494519712}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &872469762494519713
 GameObject:
   m_ObjectHideFlags: 0
@@ -4826,6 +4841,7 @@ GameObject:
   - component: {fileID: 872469762494519692}
   - component: {fileID: 872469762494519734}
   - component: {fileID: 872469762494519785}
+  - component: {fileID: 3070165813051041499}
   m_Layer: 0
   m_Name: Cube1
   m_TagString: Untagged
@@ -4910,6 +4926,20 @@ MonoBehaviour:
   highlightMat: {fileID: 2100000, guid: faa06f611437ea44f9d415cd0a375070, type: 2}
   defaultMat: {fileID: 2100000, guid: 519a0d758a4cb434dba246fc6cb31fa3, type: 2}
   number: 24
+--- !u!64 &3070165813051041499
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872469762494519713}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &872469762494519715
 GameObject:
   m_ObjectHideFlags: 0
@@ -5037,6 +5067,7 @@ GameObject:
   - component: {fileID: 872469762494519683}
   - component: {fileID: 872469762494519733}
   - component: {fileID: 872469762494519786}
+  - component: {fileID: 7657425547754199505}
   m_Layer: 0
   m_Name: Cube3
   m_TagString: Untagged
@@ -5121,6 +5152,20 @@ MonoBehaviour:
   highlightMat: {fileID: 2100000, guid: faa06f611437ea44f9d415cd0a375070, type: 2}
   defaultMat: {fileID: 2100000, guid: 519a0d758a4cb434dba246fc6cb31fa3, type: 2}
   number: 13
+--- !u!64 &7657425547754199505
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872469762494519716}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &872469762494519717
 GameObject:
   m_ObjectHideFlags: 0
@@ -5337,6 +5382,7 @@ GameObject:
   - component: {fileID: 872469762494519693}
   - component: {fileID: 872469762494519735}
   - component: {fileID: 872469762494519790}
+  - component: {fileID: 8083605496231501254}
   m_Layer: 0
   m_Name: Cube4
   m_TagString: Untagged
@@ -5421,6 +5467,20 @@ MonoBehaviour:
   highlightMat: {fileID: 2100000, guid: faa06f611437ea44f9d415cd0a375070, type: 2}
   defaultMat: {fileID: 2100000, guid: 519a0d758a4cb434dba246fc6cb31fa3, type: 2}
   number: 28
+--- !u!64 &8083605496231501254
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872469762494519718}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &872469762494519719
 GameObject:
   m_ObjectHideFlags: 0
