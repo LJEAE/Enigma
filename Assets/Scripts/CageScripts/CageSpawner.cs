@@ -37,8 +37,8 @@ public class CageSpawner : MonoBehaviour
         Debug.Log("Objet > " + cageObject.name);
         if (spawnObject == null)
         {
-            spawnObject = Instantiate(cageObject, placementIndicator.transform.position, Quaternion.identity);
-
+            Vector3 cagePosition = new Vector3(placementIndicator.transform.position.x, placementIndicator.transform.position.y + 2, placementIndicator.transform.position.z);
+            spawnObject = Instantiate(cageObject, cagePosition, Quaternion.identity);
         }
         else
         {
