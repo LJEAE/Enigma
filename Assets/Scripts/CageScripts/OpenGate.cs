@@ -21,17 +21,14 @@ public class OpenGate : MonoBehaviour
 	
 	void OnMouseDown()
     {
-		foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
-        {
-			if(go.GetComponent<OpenCadenasKey>() != null && go.GetComponent<OpenCadenasCode>() != null)
-			{
-				if(go.GetComponent<OpenCadenasKey>().isOpen == true && go.GetComponent<OpenCadenasCode>().isOpen == true){
-					GameObject.Find("Porte").GetComponent<OpenGate>().isOpen = true;
-					//Play anim
-					anim.SetBool("Active", true);
-					Debug.Log("PORTE OUVERTE");
-				}
-			}
-        }
+		
+		if(GameObject.Find("CadenasG").GetComponent<OpenCadenasKey>().isOpen == true 
+			&& GameObject.Find("CadenasD").GetComponent<OpenCadenasCode>().isOpen == true)
+		{
+			GameObject.Find("Porte").GetComponent<OpenGate>().isOpen = true;
+			//Play anim
+			anim.SetBool("Active", true);
+			Debug.Log("PORTE OUVERTE");
+		}
     }
 }
